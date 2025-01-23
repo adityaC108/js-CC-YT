@@ -74,3 +74,55 @@ let someNumber = 50
 let stringNumber = String(someNumber)
 console.log(stringNumber); // Output:- 50
 console.log(typeof stringNumber);
+
+
+// ********** Operations **********
+
+let value = 7
+let negValue = -value
+console.log(negValue); // Output:- -7
+
+
+// Arithmetic Operators
+console.log(2 + 8);
+console.log(2 - 8);
+console.log(2 * 8);
+console.log(2 / 8);
+console.log(2 % 8);
+console.log(2 ** 8);
+
+
+let str1 = "Hey"
+let str2 = " there"
+let str3 = str1 + str2
+console.log(str3); // Output:- Hey there
+
+
+console.log("3" + 2); // Output:- 32
+console.log(3 + "2"); // Output:- 32
+console.log("3" + 2 + 2); // Output:- 322
+console.log(3 + "2" + 2); // Output:- 322
+console.log(3 + 2 + "2"); // Output:- 52 
+/*
+In JS, operators like + are evaluated from left to right.
+3 and 2 are numbers, so this is a numeric addition, result is 5.
+Now, 5 (number) is being added to "2" (string).
+In JS, when one operand is a string, the other operand is coerced
+(i.e automatically converting a value from one data type to another to make an operation valid) into a string.
+This becomes string concatenation.
+So final result is 52.
+*/
+
+// Such type of conversions are not preferred in real world
+console.log(+true); // Output:- 1
+console.log(+""); // Output:- 0
+
+
+let gameCounter = 80
+gameCounter++; // Postfix increment
+console.log(gameCounter); // Output:- 81
+
+
+let gameCounter1 = 90
+++gameCounter1; // Prefix increment
+console.log(gameCounter1); // Output:- 91
