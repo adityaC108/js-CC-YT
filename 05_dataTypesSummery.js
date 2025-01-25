@@ -40,3 +40,32 @@ Javascript is dynamically typed language because variables do not have a fixed t
 The type of a variable is determined at runtime based on the value assigned to it.
 We can assign different types of values to the same variable without explicitly declaring the type.
 */
+
+// ********** Memory **********
+
+/*
+1. Stack (is used in Primitive datatypes)
+When ever stack memory is used that means what ever variables are declared we get the copy of that variable
+*/
+
+let myYTname = "ChaiAurCode"
+let anotherName = myYTname
+anotherName = "YouTube"
+console.log(myYTname); // Output:- ChaiAurCode
+console.log(anotherName); // Output:- YouTube
+
+/*
+2. Heap (is used in Non-primitive datatype)
+When ever a memory is defined in heap we get the reference of the original value, what ever changes are made it will be changed for original value
+*/
+
+let user1 = {
+    email: "xyz@gmail.com",
+    upi: "xyz@ybl"
+}
+let user2 = user1
+user2.email = "abc@gmail.com"
+console.log(user1.email); // Output:- abc@gmail.com
+console.log(user2.email); // Output:- abc@gmail.com
+
+// Refer the diagram (memoryDiagram.png)
