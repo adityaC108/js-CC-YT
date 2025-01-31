@@ -58,3 +58,38 @@ The splice() method of Array instances changes the contents of an array by remov
 const newArr3 = newArr1.splice(1, 3)
 console.log("C ", newArr1); // Output:- C  [ 71, 75 ]
 console.log(newArr3); // Output:- [ 72, 73, 74 ]
+
+const social_media = ["Instagram", "WhatsApp", "Facebook"]
+const social_media1 = ["Snapchat", "Youtube", "Twitter"]
+console.log(social_media); // Output:- [ 'Instagram', 'WhatsApp', 'Facebook' ]
+
+social_media.push(social_media1) // Works on existing array
+
+console.log(social_media); // Output:- ['Instagram', 'WhatsApp', 'Facebook', [ 'Snapchat', 'Youtube', 'Twitter' ] ]
+console.log(social_media1); // Output:- [ 'Snapchat', 'Youtube', 'Twitter' ]
+console.log(social_media[1]); // Output:- WhatsApp
+console.log(social_media[3][2]); // Output:- Twitter
+
+// returns new array
+const apps = social_media.concat(social_media1)
+console.log(apps); // Output:- ['Instagram', 'WhatsApp', 'Facebook', 'Snapchat', 'Youtube', 'Twitter']
+
+// preferred way, mostly used
+const all_apps = [...social_media, ...social_media1]
+console.log(all_apps); // Output:- ['Instagram', 'WhatsApp', 'Facebook', 'Snapchat', 'Youtube', 'Twitter']
+
+const another_array = [10, 20, 30, [40, 50, 60], 70, [60, 70, [40, 50]]]
+// flat() returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+const outcome_array = another_array.flat(Infinity)
+console.log(outcome_array); // Output:- [10, 20, 30, 40, 50, 60, 70, 60, 70, 40, 50]
+
+console.log(Array.isArray("Aditya")); // Output:- false
+console.log(Array.from("Aditya")); // Output:- [ 'A', 'd', 'i', 't', 'y', 'a' ]
+console.log(Array.from({name: "Aditya"})); // Output:- [] (we need to mention that, we want array of key or array of value else it would give empty array) (**Interview question**)
+
+
+let score1 = 20
+let score2 = 40
+let score3 = 60
+// of() returns a new array from a set of elements
+console.log(Array.of(score1, score2, score3)); // Output:- [ 20, 40, 60 ]
