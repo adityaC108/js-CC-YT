@@ -110,3 +110,34 @@ console.log(Object.values(tinderUser1)); // Output:- [ '567pqr', 'Sergey', false
 console.log(Object.entries(tinderUser1)); // Output:- [ [ 'id', '567pqr' ], [ 'name', 'Sergey' ], [ 'isLoggedIn', false ] ]
 console.log(tinderUser1.hasOwnProperty('isLoggedIn')); // Output:- true
 console.log(tinderUser1.hasOwnProperty('isLogged')); // Output:- false
+
+// Object Destructuring
+
+const course = {
+    courseName: "Javascript",
+    price: "999",
+    courseInstructor: "Hitesh Choudhary"
+}
+const{courseInstructor} = course
+console.log(courseInstructor); // Output:- Hitesh Choudhary
+
+const{courseInstructor: instructor} = course
+console.log(instructor); // Output:- Hitesh Choudhary
+
+// API
+
+// Structure of JSON, in this key and value both are string
+{ // API in the object form
+    "name": "Rishi",
+    "courseName": "Cybersecurity",
+    "price": "4999"
+}
+
+[ // API in the array form
+    {},
+    {},
+    {}
+]
+
+// https://randomuser.me/ (A free, open-source API for generating random user data. Like Lorem Ipsum, but for people.)
+// https://jsonformatter.org/ (Tool)
