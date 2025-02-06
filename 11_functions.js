@@ -57,3 +57,39 @@ function loginUser1(userName = "Patrick"){
 }
 console.log(loginUser1()); // Output:- Patrick has just logged in
 console.log(loginUser1("Evan")); // Output:- Evan has just logged in (value is overwritten)
+
+function calculateCartPrice(...num1){ // rest and spread operator
+    return num1
+}
+console.log(calculateCartPrice(150, 300, 500, 1000)); // Output:- [ 150, 300, 500, 1000 ]
+
+function calculateCartPrice1(val1, val2, ...num1){ // (**Interview question**)
+    return num1
+}
+console.log(calculateCartPrice1(150, 300, 500, 1000)); // Output:- [ 500, 1000 ] (150 is taken by val1, 300 is taken by val2 and rest all is taken by the array)
+
+// Pass object in the function and use it
+ const user = {
+    userName: "Oliver",
+    price: 1999
+ }
+
+ function handleObject(anyObject){
+    console.log(`Username is ${anyObject.userName} and price is ${anyObject.price}`);
+ }
+ handleObject(user) // Output:- Username is Oliver and price is 1999
+
+handleObject({ // other way of passing object
+    userName: "Elio",
+    price: 2999
+ }) // Output:- Username is Elio and price is 2999
+
+// Pass array in the function and use it
+const myNewArray = [250, 350, 450, 550]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray)); // Output:- 350
+
+console.log(returnSecondValue([650, 750, 850, 950])); // other way of passing array. Output:- 750
