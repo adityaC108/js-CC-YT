@@ -45,3 +45,33 @@ console.log(`User is: ${activity}`); // Output:- activity is not defined
 
 const balance = 500
 if (balance > 100) console.log("Yes"); // Output:- Yes (Implicit scope)
+
+// Nesting
+
+const balance1 = 1000 
+if (balance1 < 500) {
+    console.log("Less than");
+} else if (balance1 < 750) {
+    console.log("Less than 750");
+} else if (balance1 < 900) {
+    console.log("Less than 900");
+} else {
+    console.log("Less than 900"); // Output:- Less than 900
+}
+
+/*
+Real-life example:-
+We've created a account on website to buy a course.
+*/
+
+const userLoggedIn = true
+const debitCard = true
+const loggedInFromGoogle = false
+const loggedInFromEmail = true
+if (userLoggedIn && debitCard) {
+    console.log("Allow to buy course"); //  Output:- Allow to buy course
+}
+
+if (loggedInFromGoogle || loggedInFromEmail) {
+    console.log("User logged in"); // Output:- User logged in
+}
